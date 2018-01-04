@@ -4,7 +4,8 @@ class Violations
               :violation_category,
               :violation_date,
               :violation_date_closed,
-              :violation_type
+              :violation_type,
+              :violations
   def initialize(data)
     @violation_id = data[:violation_id]
     @inspection_id = data[:inspection_id]
@@ -15,11 +16,10 @@ class Violations
   end
 
   def self.from_csv(data)
-    violations = Violations.new(data)
+    @violations = Violations.new(data)
   end
 
   def category_sort
-
   end
 
 end

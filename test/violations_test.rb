@@ -7,7 +7,7 @@ require 'csv'
 class ViolationsTest < Minitest::Test
 
   def setup
-    @csv = Violations.from_csv({violations:"./test/Violations-2012(1).csv"})
+    @csv = Violations.from_csv(violations: "./test/Violations-2012(1).csv")
     @violations = Violations.new(@csv)
   end
 
